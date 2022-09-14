@@ -1,0 +1,25 @@
+<div>
+  <form [formGroup]="addPostForm" class="example-form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="title">Title</mat-label>
+      <input id="title" formControlName="title" matInput />
+      <mat-error *ngIf="this.addPostForm.controls.title.errors?.required">
+        Title is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="description">Description</mat-label>
+      <input id="description" formControlName="description" matInput />
+      <mat-error *ngIf="this.addPostForm.controls.description.errors?.required">
+        Description is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- <mat-form-field class="example-full-width" appearance="fill"> -->
+    <button type="submit" class="button" mat-flat-button color="primary">
+      Add
+    </button>
+    <!-- </mat-form-field> -->
+  </form>
+</div>

@@ -4,14 +4,16 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormComponent } from './form/form.component';
 import { MaterialExampleModule } from '../material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddPostComponent } from './add-post/add-post.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    AddPostComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
